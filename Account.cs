@@ -22,7 +22,7 @@ namespace Simple_ATM_Software
                         useDbCmd.ExecuteNonQuery();
                     }
 
-                    // Define the SQL query to delete a Purchase Order
+                    // Define the SQL query to add new card number. 
                     string updateQuery = "INSERT INTO Accounts(CardNumber) VALUES(@CardNumber);";
 
                     using (MySqlCommand cmd = new MySqlCommand(updateQuery, connection))
