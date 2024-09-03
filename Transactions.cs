@@ -14,14 +14,14 @@ namespace Simple_ATM_Software
                     connection.Open();
 
                     // Set the current database to 'simple_atm_software'
-                    string useDatabaseQuery = "USE simple_atm_software;";
+                    string useDatabaseQuery = "USE simple_atm_software";
                     using (MySqlCommand useDbCmd = new MySqlCommand(useDatabaseQuery, connection))
                     {
                         useDbCmd.ExecuteNonQuery();
                     }
 
                     // Define the SQL query to record a transaction.
-                    string updateQuery = "INSERT INTO Transactions(CardNumber, TransType, Amount, TransTime) VALUES(@CardNumber, @TransType, @Amount, @TransTime);";
+                    string updateQuery = "INSERT INTO Transactions(CardNumber, TransType, Amount, TransTime) VALUES(@CardNumber, @TransType, @Amount, @TransTime)";
 
                     using (MySqlCommand cmd = new MySqlCommand(updateQuery, connection))
                     {
